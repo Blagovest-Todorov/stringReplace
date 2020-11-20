@@ -7,10 +7,15 @@ namespace _04.substrings
     {
         static void Main()
         {
-            string text = "Peshoe";
-            // text.Replace('e', '!'); //take the string text, everywhere You see symbol-e, put symbol !;
-            // Console.WriteLine(text);//dont work, it creates new string! -> new variable
-            string newString = text.Replace('e', '!');
+            string text = "Pesho";
+            string newString = text.Replace("Pe", "Go")
+                                   .Replace("sho", "Ivanov")
+                                   .Replace("Ivanova", "Maria") //here replaces any found in string 
+                                                                //first param with second parameter
+                                   .Substring(2);//Here we take from the end result  
+                                                 // text string from 2nd index till the end of text string //
+
+
             Console.WriteLine(newString);
 
         }
